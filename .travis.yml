@@ -1,0 +1,29 @@
+language: python
+
+python:
+  - "3.6"
+
+cache: pip
+
+services:
+  - postgresql
+
+env:
+  - DJANGO_VERSION=2.0.*
+  - DJANGO_VERSION=2.1.*
+  - DJANGO_VERSION=2.2.*
+
+install:
+  - pip install -U pip setuptools
+  - pip install -U "Django==${DJANGO_VERSION}"
+  - pip install -e .[ci]
+
+before_script:
+  - cd tests
+
+script:
+  - pytest --cov --cov-report term-missing:skip-covered
+  - flake8 ../drf_tree_routers/
+
+after_success:
+  - coveralls
