@@ -1,0 +1,37 @@
+[
+    {
+        "model": "test00_basic.a",
+        "pk": 1,
+        "fields": {
+            "x": 100
+        }
+    },
+    {
+        "model": "test00_basic.a",
+        "pk": 2,
+        "fields": {
+            "x": 555
+        }
+    },
+    {
+        "model": "test00_basic.b",
+        "pk": 1,
+        "fields": {
+            "a": 1
+        }
+    },
+    {
+        "model": "test00_basic.b",
+        "pk": 2,
+        "fields": {
+            "a": 2
+        }
+    },
+    {
+        "model": "test00_basic.b",
+        "pk": 3,
+        "fields": {
+            "a": 1
+        }
+    }
+]
